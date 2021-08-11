@@ -25,14 +25,16 @@ void main(){
 #endif
 	//Initialisation
 	#ifdef PC
-		width  = 320;
-		height = 528;
+		//width  = 320;
+		//height = 528;
+		width  = 320*1.5;
+		height = 528*1.5;
 		SDL_Init(SDL_INIT_EVERYTHING);
-		win = SDL_CreateWindow("CP3D", 100,100,width,height,SDL_WINDOW_SHOWN);
+		win = SDL_CreateWindow("not actually hollyhock-2", 100,100,width,height,SDL_WINDOW_SHOWN);
 		renderer = SDL_CreateRenderer(win, -1, 0);
 		SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
 		SDL_RenderClear(renderer);
-		texture = SDL_CreateTexture(renderer,SDL_PIXELFORMAT_RGBA8888,SDL_TEXTUREACCESS_TARGET,320,528);
+		texture = SDL_CreateTexture(renderer,SDL_PIXELFORMAT_RGBA8888,SDL_TEXTUREACCESS_TARGET,width,height);
 	#else
 		vram = LCD_GetVRAMAddress();
 		LCD_GetSize(&width, &height);
