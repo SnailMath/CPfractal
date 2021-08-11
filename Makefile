@@ -22,7 +22,7 @@ APP_NAME:=CPfractal
 
 #The pc compiler
 C_PC:=gcc
-C_PC_FLAGS:=-W -Wall -DPC -lSDL2
+C_PC_FLAGS:=-W -Wall -DPC -lSDL2 -fno-exceptions
 
 #The sh4 assembler, compiler and linker:
 AS:=sh4-elf-as
